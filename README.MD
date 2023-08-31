@@ -1,8 +1,5 @@
 # Task
 The challenge is about integrating with a third-party data provider (Robinhood in this case).
-As the market data team, we are responsible for all data provided in Midas related to
-financial instruments and this requires us to integrate with many different data providers. We
-want you to experience this process closely.
 You are given an SQL file that contains `instrument` table creation and seed data. You can
 find this file here: https://gist.github.com/ahmetuysal/431cab9bdf6f6f68c75b389522879d4b
 

@@ -12,7 +12,7 @@ Let’s dive in!
 You will use the Robinhood markets endpoint to retrieve and save all markets to the
 database.
 GET https://api.robinhood.com/markets
-- [ ] Market table creation: columns should be id, code (mic field in Robinhood response),
+- [x] Market table creation: columns should be id, code (mic field in Robinhood response),
   symbol (acronym field in Robinhood response), name, country, and website
 - [ ] REST endpoint to trigger market sync (retrieving from the provider and updating the
   database)
@@ -22,7 +22,7 @@ GET https://api.robinhood.com/markets
   database.
   GET https://api.robinhood.com/instruments/?symbol=AAPL
 
-- [ ] Initially, the instrument table only contained id and symbol columns. You are
+- [x] Initially, the instrument table only contained id and symbol columns. You are
   expected to alter the instrument table to add new columns: name, custom_name
   (simple_name field in Robinhood response), and market_id (you will have to find the
   corresponding market record by interpreting the market field in Robinhood response)
@@ -36,7 +36,7 @@ You are expected to provide two REST endpoints to
 
 ## Technical Requirements
 - [x] You should use Java 17 and Spring Boot 
-- [ ] You can use any relational database (PostgreSQL is preferred)
+- [x] You can use any relational database (PostgreSQL is preferred)
 - [ ] Your submission should be runnable without any modifications
 - [ ] Your code should be adequately tested (unit & integration)
 - [ ] Bonus: Containerize your application with Docker

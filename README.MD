@@ -1,3 +1,14 @@
+# Solution
+Application can be run via `docker-compose up -d`. This will populate the database (PostgreSQL) using the query
+files in `init-scripts`. After running the containers you can use the following endpoints:
+
+```
+POST: localhost:8080/api/instrument/sync
+POST: localhost:8080/api/market/sync
+GET : localhost:8080/api/instrument/get/<SYMBOL>
+GET : localhost:8080/api/instrument/getall
+```
+
 # Task
 The challenge is about integrating with a third-party data provider (Robinhood in this case).
 You are given an SQL file that contains `instrument` table creation and seed data. You can

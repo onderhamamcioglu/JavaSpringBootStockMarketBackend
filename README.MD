@@ -32,7 +32,7 @@ GET https://api.robinhood.com/markets
 ## Part III: Instrument Retrieve
 You are expected to provide two REST endpoints to
 - [ ] Retrieving all instruments
-- [ ] Retrieving instrument by given symbol
+- [x] Retrieving instrument by given symbol
 
 ## Technical Requirements
 - [x] You should use Java 17 and Spring Boot 

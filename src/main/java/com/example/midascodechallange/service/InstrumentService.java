@@ -112,4 +112,8 @@ public class InstrumentService {
             Thread.currentThread().interrupt();
         }
     }
+
+    public Instrument getInstrumentBySymbol(String symbol) {
+        return instrumentRepository.findBySymbol(symbol);
+    }
 }

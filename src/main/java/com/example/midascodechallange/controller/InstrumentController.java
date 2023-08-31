@@ -1,13 +1,12 @@
 package com.example.midascodechallange.controller;
 
+import com.example.midascodechallange.model.Instrument;
 import com.example.midascodechallange.service.InstrumentService;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestClientException;
 
 @RestController
@@ -28,6 +27,16 @@ public class InstrumentController {
             return new ResponseEntity<>("Instrument data updated.", HttpStatus.OK);
         } catch (RestClientException e) { //catch (RestClientException | JSONException e) {
             return new ResponseEntity<>("Error syncing instrument data: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("/get/{symbol}")
+    public ResponseEntity<Instrument> getInstrumentBySymbol(@PathVariable String symbol) {
+        Instrument instrument = instrumentService.getInstrumentBySymbol(symbol);
+        if (instrument != null) {
+            return new ResponseEntity<>(instrument, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 }

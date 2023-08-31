@@ -38,6 +38,6 @@ You are expected to provide two REST endpoints to
 - [x] You should use Java 17 and Spring Boot 
 - [x] You can use any relational database (PostgreSQL is preferred)
 - [x] Your submission should be runnable without any modifications
-- [ ] Your code should be adequately tested (unit & integration)
+- [x] Your code should be adequately tested (unit & integration)
 - [x] Bonus: Containerize your application with Docker
 - [ ] Bonus: Cache implementation for retrieving stock by the symbol.

@@ -31,7 +31,7 @@ GET https://api.robinhood.com/markets
 
 ## Part III: Instrument Retrieve
 You are expected to provide two REST endpoints to
-- [ ] Retrieving all instruments
+- [x] Retrieving all instruments
 - [x] Retrieving instrument by given symbol
 
 ## Technical Requirements

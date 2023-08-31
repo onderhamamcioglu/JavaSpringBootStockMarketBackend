@@ -116,4 +116,8 @@ public class InstrumentService {
     public Instrument getInstrumentBySymbol(String symbol) {
         return instrumentRepository.findBySymbol(symbol);
     }
+
+    public List<Instrument> getAllInstruments() {
+        return instrumentRepository.findAll();
+    }
 }

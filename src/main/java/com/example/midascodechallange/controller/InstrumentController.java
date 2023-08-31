@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestClientException;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/instrument")
 public class InstrumentController {
@@ -35,6 +37,16 @@ public class InstrumentController {
         Instrument instrument = instrumentService.getInstrumentBySymbol(symbol);
         if (instrument != null) {
             return new ResponseEntity<>(instrument, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping("/getall")
+    public ResponseEntity<List<Instrument>> getAllInstruments() {
+        List<Instrument> instruments = instrumentService.getAllInstruments();
+        if(instruments != null){
+            return new ResponseEntity<>(instruments, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

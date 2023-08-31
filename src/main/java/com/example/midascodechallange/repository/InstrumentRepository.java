@@ -1,9 +1,9 @@
 package com.example.midascodechallange.repository;
 
 
-import com.example.midascodechallange.model.Market;
+import com.example.midascodechallange.model.Instrument;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface InstrumentRepository extends JpaRepository<Market, Long> {
+public interface InstrumentRepository extends JpaRepository<Instrument, Long> {
 
 }

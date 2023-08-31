@@ -14,7 +14,7 @@ database.
 GET https://api.robinhood.com/markets
 - [x] Market table creation: columns should be id, code (mic field in Robinhood response),
   symbol (acronym field in Robinhood response), name, country, and website
-- [ ] REST endpoint to trigger market sync (retrieving from the provider and updating the
+- [x] REST endpoint to trigger market sync (retrieving from the provider and updating the
   database)
   
 ## Part II: Instrument Sync

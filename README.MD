@@ -26,7 +26,7 @@ GET https://api.robinhood.com/markets
   expected to alter the instrument table to add new columns: name, custom_name
   (simple_name field in Robinhood response), and market_id (you will have to find the
   corresponding market record by interpreting the market field in Robinhood response)
-- [ ] REST endpoint to trigger instrument sync for all symbols in the database (retrieving
+- [x] REST endpoint to trigger instrument sync for all symbols in the database (retrieving
   from the provider and updating the database)
 
 ## Part III: Instrument Retrieve

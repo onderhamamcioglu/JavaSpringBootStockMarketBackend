@@ -10,9 +10,14 @@ public class Instrument {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String symbol;
+    private String name;
+    private String customName; // = "simple_name" in the Robinhood response
 
-    // Constructors, getters, setters, etc.
+    @ManyToOne
+    @JoinColumn(name = "market_id")
+    private Market market;
+
 }

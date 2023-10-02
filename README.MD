@@ -1,4 +1,4 @@
-# JavaSpringBoot-StocksAndMarketsBackend
+# JavaSpringBootStockMarketBackend
 Application can be run via `docker-compose up -d`. This will populate the database (PostgreSQL) using the query
 files in `init-scripts`. After running the containers you can use the following endpoints:
 
